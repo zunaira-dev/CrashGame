@@ -158,15 +158,16 @@ public class Window_Graph : MonoBehaviour {
     }
     [PunRPC]
     public void StartTimer() {
+        for (int i = 0; i < UIManager.Instance._content.childCount; i++) {
+            Destroy(UIManager.Instance._content.transform.GetChild(i).gameObject);
+        }
         lastCircleGameObject = null;
         UIManager.Instance.fillImage.value = 10;
         UIManager.Instance.crashPanel.SetActive(false);
-        UIManager.Instance.hitEnterButton.SetActive(false);
-        UIManager.Instance.setAmount.gameObject.SetActive(false);
-        UIManager.Instance.displayAmount.transform.parent.gameObject.SetActive(false);
+        UIManager.Instance.hitEnterButton.SetActive(true);
         UIManager.Instance.MultiplyerScreen.SetActive(false);
         UIManager.Instance.TimeScreen.SetActive(true);
-        for (int j = 3; j < graphContainer.childCount; j++) {
+        for (int j =1; j < graphContainer.childCount; j++) {
             Destroy(graphContainer.GetChild(j).gameObject);
         }
     }
@@ -174,12 +175,8 @@ public class Window_Graph : MonoBehaviour {
     public void EndTimer() {
         UIManager.Instance.MultiplyerScreen.SetActive(true);
         UIManager.Instance.TimeScreen.SetActive(false);
-        UIManager.Instance.hitEnterButton.SetActive(true);
-        UIManager.Instance.setAmount.gameObject.SetActive(true);
-        UIManager.Instance.displayAmount.transform.parent.gameObject.SetActive(true);
-        for(int i = 0; i < UIManager.Instance._content.childCount; i++) {
-            Destroy(UIManager.Instance._content.transform.GetChild(i).gameObject);
-        }
+        UIManager.Instance.hitEnterButton.SetActive(false);
+       
        
     }
     #endregion Time

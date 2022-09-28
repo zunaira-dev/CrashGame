@@ -13,10 +13,28 @@ public class PlayersData : MonoBehaviour
     }
     public void HitEnter() { 
         photonView.RPC("SpawnPlayer", RpcTarget.AllBuffered, PhotonNetwork.NickName, System.Math.Round(value, 2).ToString());
+        UIManager.Instance.hitEnterButton.SetActive(false);
     }
     public void SelectAmount() {
-        value = UIManager.Instance.setAmount.value;
-        UIManager.Instance.displayAmount.text = UIManager.Instance.setAmount.value.ToString();
+        float.TryParse(UIManager.Instance.solAmount.text, out value);
+        // value = UIManager.Instance.setAmount.value;
+        UIManager.Instance.displayAmount.text = value.ToString();
+    }
+    public void SetMin() {
+        value = 0.1f;
+        UIManager.Instance.displayAmount.text = value.ToString();
+    }
+    public void SetMax() {
+        value =5f;
+        UIManager.Instance.displayAmount.text = value.ToString();
+    }
+    public void DoubleAmount() {
+        value += value;
+        UIManager.Instance.displayAmount.text = value.ToString();
+    }
+    public void HalfAmount() {
+        value /= 2;
+        UIManager.Instance.displayAmount.text = value.ToString();
     }
     [PunRPC]
     public void SpawnPlayer(string name,string values) {

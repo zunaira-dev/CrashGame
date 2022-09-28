@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class UIManager :Singleton<UIManager>
 {
-    public InputField Name;
+    public InputField 
+        solAmount,
+        Name;
     public Transform _content;
     public Text
           multipllyerText,
