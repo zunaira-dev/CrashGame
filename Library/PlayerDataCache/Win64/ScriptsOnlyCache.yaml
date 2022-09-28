@@ -50,6 +50,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.GridLayoutGroup
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.LayoutElement
@@ -119,6 +120,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 1666}
     - Class: 114
       Script: {instanceID: 1672}
+    - Class: 114
+      Script: {instanceID: 1682}
     - Class: 114
       Script: {instanceID: 1698}
     - Class: 114
@@ -400,7 +403,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 11ce95f1a4b21c02d72e51f8eb7df295
+      Hash: 5524861e4463dc716532816efa05ae72
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -1619,4 +1622,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Test/SampleScene.unity
-  playerPath: C:/Users/DELL/Desktop/CrashGame/Curse-Of-The-Beast_Data/MultiplayerCrash.exe
+  playerPath: C:/Users/DELL/Desktop/CrashGame/MultiplayerCrash.exe
