@@ -3,6 +3,16 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CodeMonkey.Assets
     - Login
+    - Photon.Chat.Demo.ChannelSelector
+    - Photon.Chat.Demo.ChatAppIdCheckerUI
+    - Photon.Chat.Demo.ChatGui
+    - Photon.Chat.Demo.FriendItem
+    - Photon.Chat.Demo.IgnoreUiRaycastWhenInactive
+    - Photon.Chat.Demo.NamePickGui
+    - Photon.Chat.UtilityScripts.EventSystemSpawner
+    - Photon.Chat.UtilityScripts.OnStartDelete
+    - Photon.Chat.UtilityScripts.TextButtonTransition
+    - Photon.Chat.UtilityScripts.TextToggleIsOnTransition
     - PlayersData
     - PreparePool
     - TestConnect
@@ -18,6 +28,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -26,11 +38,6 @@ ScriptsOnlyBuild:
     - Photon.Pun.ServerSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -45,6 +52,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
+    - UnityEngine.UI.LayoutElement
     - UnityEngine.UI.Mask
     - UnityEngine.UI.Outline
     - UnityEngine.UI.ScrollRect
@@ -52,6 +60,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.ToggleGroup
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
     Assets/Test/SampleScene.unity:
     - Class: 1
@@ -80,6 +91,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -95,51 +108,75 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1450}
     - Class: 114
-      Script: {instanceID: 1536}
+      Script: {instanceID: 1452}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1534}
     - Class: 114
-      Script: {instanceID: 1674}
+      Script: {instanceID: 1546}
     - Class: 114
-      Script: {instanceID: 1700}
+      Script: {instanceID: 1624}
     - Class: 114
-      Script: {instanceID: 1704}
+      Script: {instanceID: 1666}
     - Class: 114
-      Script: {instanceID: 1728}
+      Script: {instanceID: 1672}
     - Class: 114
-      Script: {instanceID: 2154}
+      Script: {instanceID: 1698}
     - Class: 114
-      Script: {instanceID: 2202}
+      Script: {instanceID: 1702}
+    - Class: 114
+      Script: {instanceID: 1726}
+    - Class: 114
+      Script: {instanceID: 2152}
+    - Class: 114
+      Script: {instanceID: 2188}
+    - Class: 114
+      Script: {instanceID: 2200}
+    - Class: 114
+      Script: {instanceID: 2344}
+    - Class: 114
+      Script: {instanceID: 2390}
     - Class: 114
       Script: {instanceID: 2392}
     - Class: 114
-      Script: {instanceID: 2394}
+      Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 2508}
+      Script: {instanceID: 2672}
     - Class: 114
-      Script: {instanceID: 2674}
+      Script: {instanceID: 2718}
     - Class: 114
-      Script: {instanceID: 2720}
+      Script: {instanceID: 2868}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 2878}
+      Script: {instanceID: 2882}
     - Class: 114
       Script: {instanceID: 2884}
     - Class: 114
       Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 2888}
+      Script: {instanceID: 2892}
     - Class: 114
-      Script: {instanceID: 2970}
+      Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 3138}
+      Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 3184}
+      Script: {instanceID: 3136}
     - Class: 114
-      Script: {instanceID: 3394}
+      Script: {instanceID: 3182}
+    - Class: 114
+      Script: {instanceID: 3194}
+    - Class: 114
+      Script: {instanceID: 3248}
+    - Class: 114
+      Script: {instanceID: 3360}
+    - Class: 114
+      Script: {instanceID: 3392}
+    - Class: 114
+      Script: {instanceID: 3646}
     - Class: 114
       Script: {instanceID: 3670}
+    - Class: 114
+      Script: {instanceID: 3674}
     - Class: 114
       Script: {instanceID: 3694}
     - Class: 114
@@ -147,25 +184,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3744}
     - Class: 114
-      Script: {instanceID: 3860}
+      Script: {instanceID: 3818}
     - Class: 114
-      Script: {instanceID: 3898}
+      Script: {instanceID: 3862}
     - Class: 114
-      Script: {instanceID: 3902}
+      Script: {instanceID: 3900}
     - Class: 114
-      Script: {instanceID: 4274}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 4416}
+      Script: {instanceID: 3992}
     - Class: 114
-      Script: {instanceID: 4642}
+      Script: {instanceID: 4276}
     - Class: 114
-      Script: {instanceID: 4716}
+      Script: {instanceID: 4288}
     - Class: 114
-      Script: {instanceID: 16628}
+      Script: {instanceID: 4418}
     - Class: 114
-      Script: {instanceID: 35964}
+      Script: {instanceID: 4546}
     - Class: 114
-      Script: {instanceID: 35976}
+      Script: {instanceID: 4644}
+    - Class: 114
+      Script: {instanceID: 4718}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1111,6 +1150,12 @@ ScriptsOnlyBuild:
     className: AutoSyncSceneToggle
   - hash:
       serializedVersion: 2
+      Hash: 908d9a9f0270625e4a5e193005baf8e6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PreparePool
+  - hash:
+      serializedVersion: 2
       Hash: ee1dba1a186ac062d564e9eb73a1c56f
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1193,6 +1238,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomMasterClientIdProperty
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayersData
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1565,19 +1616,7 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayersData
-  - hash:
-      serializedVersion: 2
-      Hash: 908d9a9f0270625e4a5e193005baf8e6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PreparePool
   platform: 19
   scenePathNames:
   - Assets/Test/SampleScene.unity
-  playerPath: C:/Users/DELL/Desktop/New folder/MultiplayerCrash.exe
+  playerPath: C:/Users/DELL/Desktop/CrashGame/Curse-Of-The-Beast_Data/MultiplayerCrash.exe

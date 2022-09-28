@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{68243828-42E1-488B-F47A-49EA1F953ECF}</ProjectGuid>
+    <ProjectGuid>{1BD795DD-FB3F-AE33-5D7F-A7ECDFF7B3F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,9 @@
     <UnityVersion>2020.3.20f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\TestConnect.cs" />
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\Utils\Button_UI.cs" />
@@ -80,9 +83,11 @@
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\Utils\FunctionTimer.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\Utils\UI_Bar.cs" />
+    <Compile Include="Assets\Scripts\PreparePool.cs" />
     <Compile Include="Assets\Scripts\Login.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Scripts\PlayersData.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\Utils\UI_Sprite.cs" />
@@ -91,8 +96,6 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\Scripts\_Graph\CodeMonkey\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\PlayersData.cs" />
-    <Compile Include="Assets\Scripts\PreparePool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
@@ -714,43 +717,43 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="PhotonUnityNetworking.csproj">
-      <Project>{5FFC583C-C831-6B98-47C7-79EA846691B5}</Project>
+      <Project>{EC5F46F2-0B7D-7636-E634-D96E7DD9153F}</Project>
       <Name>PhotonUnityNetworking</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
-      <Project>{21319090-3FC2-F007-87B5-54C8DAFDD94C}</Project>
+      <Project>{7405770B-8210-5EEF-59BF-8469AA914A44}</Project>
       <Name>PhotonChat</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Demos.csproj">
-      <Project>{ACC32D30-42A3-A7FD-D5FD-DCBA06D89613}</Project>
+      <Project>{13B74BDA-C4F3-B735-7162-B22D941D90BD}</Project>
       <Name>PhotonUnityNetworking.Demos</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
-      <Project>{0FAA1CE1-548E-707F-ECCB-27D00CEB181C}</Project>
+      <Project>{A1BB029C-A89E-D852-25D4-B8F99986B723}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.PhotonPlayer.Editor.csproj">
-      <Project>{53E54F98-E2FE-B60F-C450-621A35FC2EB6}</Project>
+      <Project>{41E67BA8-6A4B-7436-5A06-993C16DF5DF9}</Project>
       <Name>PhotonUnityNetworking.Utilities.PhotonPlayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoHubEditor.csproj">
-      <Project>{1C622F98-122A-CBF6-D8C7-256138E161C2}</Project>
+      <Project>{8E6333F8-EB1C-E5C0-AD2C-F406E2889026}</Project>
       <Name>PunDemos.DemoHubEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonRealtime.csproj">
-      <Project>{0B98FCDF-3817-657A-AEB0-1AC6707F73BA}</Project>
+      <Project>{B336F1A4-2734-731F-4989-7AD81AF947F8}</Project>
       <Name>PhotonRealtime</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{A1E5D08C-17A1-A113-F521-6EF2F9748CF7}</Project>
+      <Project>{537829FC-4018-1463-AAC7-027D551E9043}</Project>
       <Name>PhotonUnityNetworking.Utilities</Name>
     </ProjectReference>
     <ProjectReference Include="PunDemos.DemoSlotcarEditor.csproj">
-      <Project>{D8EA498C-A34B-C36B-A4EF-281475BFE2FF}</Project>
+      <Project>{C044655F-335E-49E0-A1D3-55E7D716E22E}</Project>
       <Name>PunDemos.DemoSlotcarEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
-      <Project>{563C3C91-A8A8-B16E-ACDC-FFA932C3AD39}</Project>
+      <Project>{F3C35A64-6EFD-D130-E57A-7B59265B402A}</Project>
       <Name>PhotonUnityNetworking.Utilities.Culling.Editor</Name>
     </ProjectReference>
   </ItemGroup>

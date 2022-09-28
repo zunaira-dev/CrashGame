@@ -37,9 +37,9 @@ public class Window_Graph : MonoBehaviour {
     IEnumerator ShowGraph(List<float> valueList) {
         float graphHeight = graphContainer.sizeDelta.y;
         float yMaximum = 7f;
-        float xSize = 60f;
-
-        lastCircleGameObject = null;
+        float xSize = 50f;
+        //lastCircleGameObject = null;
+        photonView.RPC("On", RpcTarget.AllBuffered, 0.0f, 0.0f);
         int i = 0;
         while (i < valueList.Count) {
             //for (int i = 0; i < valueList.Count; i++) {
@@ -69,8 +69,9 @@ public class Window_Graph : MonoBehaviour {
     [PunRPC]
     public void On(float x, float y) {
         GameObject circleGameObject = CreateCircle(new Vector2(x, y));
-        if (lastCircleGameObject != null) {
-            CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
+        Debug.Log(x);
+          if (lastCircleGameObject != null) {
+        CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
         }
         lastCircleGameObject = circleGameObject;
     }
@@ -89,7 +90,7 @@ public class Window_Graph : MonoBehaviour {
     }
     public void GenerategraphValue() {
         valueList = new List<float>();
-        valueList.Add(0);
+       // valueList.Add(0);
         int limit = Random.Range(0, 5);
         float num = 0;
         while (num <= limit) {
@@ -157,6 +158,7 @@ public class Window_Graph : MonoBehaviour {
     }
     [PunRPC]
     public void StartTimer() {
+        lastCircleGameObject = null;
         UIManager.Instance.fillImage.value = 10;
         UIManager.Instance.crashPanel.SetActive(false);
         UIManager.Instance.hitEnterButton.SetActive(false);
@@ -164,7 +166,7 @@ public class Window_Graph : MonoBehaviour {
         UIManager.Instance.displayAmount.transform.parent.gameObject.SetActive(false);
         UIManager.Instance.MultiplyerScreen.SetActive(false);
         UIManager.Instance.TimeScreen.SetActive(true);
-        for (int j = 5; j < graphContainer.childCount; j++) {
+        for (int j = 3; j < graphContainer.childCount; j++) {
             Destroy(graphContainer.GetChild(j).gameObject);
         }
     }
